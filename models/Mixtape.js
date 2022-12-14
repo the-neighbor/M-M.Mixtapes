@@ -16,7 +16,7 @@ Mixtape.init(
             allowNull: false
         },
         description: {
-            type: DataTypes.LONGTEXT,
+            type: DataTypes.STRING,
             defaultValue: "No description provided."
         },
         user_id: {
@@ -29,6 +29,7 @@ Mixtape.init(
     }, {
         sequelize,
         timestamps: true,
+        freezeTableName: true,
         modelName:"mixtape"
     }
 );
