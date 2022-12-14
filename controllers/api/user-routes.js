@@ -1,5 +1,21 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Mixtape } = require('../../models');
+
+router.get('/:id', async (req, res) => {
+    console.log("hello");
+    try {
+        const userData = await User.findByPk(req.params.id, 
+            {attributes: { exclude: ['password', 'email'] },
+            include: [{ model: Mixtape }]
+            }
+            );
+        console.log("hello");
+        const user = userData.get({ plain: true });
+        res.json(user);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 router.post('/', async (req, res) => {
   try {
