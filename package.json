@@ -1,0 +1,23 @@
+{
+  "name": "m-m.mixtapes",
+  "version": "1.0.0",
+  "description": "MVC application for making mixtapes/playlists. Uses Node, Express, Sequelize, Handlebars, MySQL, and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-neighbor/M-M.Mixtapes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-neighbor/M-M.Mixtapes/issues"
+  },
+  "homepage": "https://github.com/the-neighbor/M-M.Mixtapes#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.27.0"
+  }
+}
